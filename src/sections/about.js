@@ -55,13 +55,53 @@ export function initAbout() {
     });
   });
 
-  // value marquee drifts against scroll direction
-  const drift = document.querySelector('[data-about-drift]');
-  if (drift) {
-    gsap.to(drift, {
-      xPercent: -30,
-      ease: 'none',
-      scrollTrigger: { trigger: '.about', start: 'top bottom', end: 'bottom top', scrub: 1 },
-    });
-  }
+  // photo strip — auto-scrolling infinite marquee that is also draggable
+  initStrip(document.querySelector('[data-about-drift]'));
+}
+
+function initStrip(strip) {
+  if (!strip) return;
+
+  // duplicate the photos once so the loop is seamless
+  strip.innerHTML += strip.innerHTML;
+  strip.style.cursor = 'grab';
+
+  let half = 0;                 // width of one (original) set
+  const measure = () => { half = strip.scrollWidth / 2; };
+  measure();
+  window.addEventListener('load', measure);
+  window.addEventListener('resize', measure);
+
+  let x = 0;
+  const speed = 0.4;            // px per frame (auto drift)
+  let dragging = false;
+  let startX = 0, startPos = 0;
+
+  const wrap = () => {
+    if (!half) return;
+    if (x <= -half) x += half;
+    if (x > 0) x -= half;
+  };
+
+  gsap.ticker.add(() => {
+    if (!half) measure();
+    if (!dragging) x -= speed;
+    wrap();
+    gsap.set(strip, { x });
+  });
+
+  strip.style.pointerEvents = 'auto';
+  strip.addEventListener('pointerdown', (e) => {
+    dragging = true; startX = e.clientX; startPos = x;
+    strip.style.cursor = 'grabbing';
+    strip.setPointerCapture?.(e.pointerId);
+  });
+  window.addEventListener('pointermove', (e) => {
+    if (!dragging) return;
+    x = startPos + (e.clientX - startX);
+    wrap();
+  });
+  const release = () => { dragging = false; strip.style.cursor = 'grab'; };
+  window.addEventListener('pointerup', release);
+  window.addEventListener('pointercancel', release);
 }

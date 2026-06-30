@@ -105,6 +105,28 @@ body.menu-open .navmenu__links a span { transform: translateY(0); transition: tr
 body.menu-open .navmenu__cta { opacity: 1; transform: none; }
 @media (min-width: 861px) { .navmenu { display: none; } }
 
+/* ░░ LIGHTBOX ░░ */
+.lightbox {
+  position: fixed; inset: 0; z-index: 190;
+  display: grid; place-items: center; padding: 5vw;
+  background: rgba(8,12,20,0.86); backdrop-filter: blur(12px);
+  visibility: hidden; opacity: 0;
+}
+.lightbox.is-open { visibility: visible; cursor: zoom-out; }
+.lightbox__fig { max-width: 92vw; max-height: 88vh; }
+.lightbox__fig img {
+  width: auto; height: auto; max-width: 92vw; max-height: 88vh;
+  object-fit: contain; border-radius: 6px; box-shadow: 0 40px 120px rgba(0,0,0,0.55);
+}
+.lightbox__close {
+  position: absolute; top: 18px; right: 26px; z-index: 2;
+  width: 50px; height: 50px; border-radius: 50%;
+  font-size: 2rem; line-height: 1; color: #fff;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25);
+  display: grid; place-items: center; transition: background 0.3s;
+}
+.lightbox__close:hover { background: rgba(255,255,255,0.25); }
+
 /* ░░ SCENE RAIL ░░ */
 .rail {
   position: fixed; right: var(--gutter); bottom: clamp(1.4rem, 4vh, 3rem); z-index: 110;

@@ -45,4 +45,46 @@ export function initGallery() {
       apply(btn.dataset.filter);
     });
   });
+
+  initLightbox(items);
+}
+
+/** Click a gallery image → open it enlarged in a lightbox. */
+function initLightbox(items) {
+  const box = document.querySelector('[data-lightbox]');
+  const bigImg = document.querySelector('[data-lightbox-img]');
+  const closeBtn = document.querySelector('[data-lightbox-close]');
+  if (!box || !bigImg) return;
+
+  const open = (src, alt) => {
+    // request a larger version of the same Unsplash image
+    bigImg.src = src.replace(/w=\d+/, 'w=1600');
+    bigImg.alt = alt || '';
+    box.classList.add('is-open');
+    box.setAttribute('aria-hidden', 'false');
+    if (window.__lenis) window.__lenis.stop();
+    gsap.fromTo(box, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.35, ease: 'power2.out' });
+    gsap.fromTo('.lightbox__fig', { scale: 0.92, y: 16 }, { scale: 1, y: 0, duration: 0.5, ease: 'expo.out' });
+  };
+  const close = () => {
+    gsap.to(box, { autoAlpha: 0, duration: 0.3, ease: 'power2.in', onComplete: () => {
+      box.classList.remove('is-open');
+      box.setAttribute('aria-hidden', 'true');
+      bigImg.src = '';
+    }});
+    if (window.__lenis) window.__lenis.start();
+  };
+
+  items.forEach((fig) => {
+    const img = fig.querySelector('img');
+    if (!img) return;
+    fig.style.cursor = 'zoom-in';
+    fig.addEventListener('click', () => open(img.currentSrc || img.src, img.alt));
+  });
+
+  closeBtn?.addEventListener('click', close);
+  box.addEventListener('click', (e) => { if (e.target === box) close(); });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && box.classList.contains('is-open')) close();
+  });
 }

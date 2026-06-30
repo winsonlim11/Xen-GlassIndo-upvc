@@ -14,5 +14,5 @@ export function revealHero() {
   tl.from('.hero__title .word',
     { yPercent: 110, duration: 1.3, stagger: 0.12 })
     .from('[data-hero-fade]', { y: 26, opacity: 0, duration: 1, stagger: 0.12 }, '-=0.85')
-    .from('.gitem', { opacity: 0, y: 36, scale: 0.9, duration: 0.9, stagger: 0.05, ease: 'power3.out' }, '-=0.9');
+    .from('.gitem', { opacity: 0, y: 36, scale: 0.9, duration: 0.9, stagger: 0.05, ease: 'power3.out', clearProps: 'all' }, '-=0.9');
 }
