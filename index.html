@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPV° — Window &amp; Door uPVC Premium · Medan</title>
+  <meta name="description" content="UPV° merancang dan memproduksi window &amp; door uPVC premium — dibuat untuk kesenyapan, cahaya, dan ketahanan. Melayani Medan dan sekitarnya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ░░ PRELOADER ░░ -->
+  <div class="preloader" data-preloader>
+    <div class="preloader__inner">
+      <div class="preloader__mark">UPV°</div>
+      <div class="preloader__bar"><span data-preloader-bar></span></div>
+      <div class="preloader__count"><span data-preloader-count>0</span><i>%</i></div>
+    </div>
+    <div class="preloader__curtain" data-preloader-curtain></div>
+  </div>
+
+  <!-- ░░ NAVIGATION ░░ -->
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="#hero" data-cursor-hover>UPV<i>°</i></a>
+    <nav class="nav__links">
+      <a href="#about" data-nav-link data-cursor-hover>Tentang</a>
+      <a href="#products" data-nav-link data-cursor-hover>Produk</a>
+      <a href="#projects" data-nav-link data-cursor-hover>Proyek</a>
+      <a href="#services" data-nav-link data-cursor-hover>Layanan</a>
+      <a href="#contact" data-nav-link data-cursor-hover>Kontak</a>
+    </nav>
+    <a href="#contact" class="nav__cta" data-cursor-hover><span>Minta Penawaran</span></a>
+    <button class="nav__menu" data-nav-toggle aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </header>
+
+  <!-- ░░ MOBILE MENU OVERLAY ░░ -->
+  <div class="navmenu" data-navmenu aria-hidden="true">
+    <nav class="navmenu__links">
+      <a href="#about" data-navmenu-link><span>Tentang</span></a>
+      <a href="#products" data-navmenu-link><span>Produk</span></a>
+      <a href="#projects" data-navmenu-link><span>Proyek</span></a>
+      <a href="#services" data-navmenu-link><span>Layanan</span></a>
+      <a href="#contact" data-navmenu-link><span>Kontak</span></a>
+    </nav>
+    <a href="#contact" class="navmenu__cta" data-navmenu-link>Minta Penawaran</a>
+  </div>
+
+  <!-- ░░ SCENE PROGRESS RAIL ░░ -->
+  <aside class="rail" data-rail aria-hidden="true">
+    <span data-rail-index>01</span>
+    <div class="rail__line"><i data-rail-fill></i></div>
+    <span class="rail__label" data-rail-label>Pembuka</span>
+  </aside>
+
+  <main data-scroll-root>
+
+    <!-- ═══════════ 01 · HERO ═══════════ -->
+    <section class="hero" id="hero" data-scene="Pembuka" data-scene-index="01">
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__layout">
+        <div class="hero__inner">
+          <p class="hero__eyebrow" data-hero-fade>Window &amp; Door uPVC Premium · Medan</p>
+          <h1 class="hero__title" data-hero-title>
+            <span class="line"><span class="word">UPV</span><span class="word deg">°</span></span>
+            <span class="line"><span class="word italic">Apertures</span></span>
+          </h1>
+          <div class="hero__meta" data-hero-fade>
+            <p>Window &amp; door uPVC premium — dirancang untuk kesenyapan, rapat terhadap cuaca, dan dibuat untuk hunian yang lebih tenang.</p>
+            <a href="#products" class="hero__scrolllink">
+              <span>Masuk showroom</span>
+              <i class="arrow"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- filterable aperture gallery (GSAP Flip) -->
+        <div class="gallery" data-gallery>
+          <div class="gallery__filters" data-hero-fade role="group" aria-label="Filter apertures">
+            <button class="gfilter is-active" data-filter="all">Semua</button>
+            <button class="gfilter" data-filter="window">Windows</button>
+            <button class="gfilter" data-filter="door">Doors</button>
+            <button class="gfilter" data-filter="facade">Facades</button>
+          </div>
+          <div class="gallery__grid" data-flip-grid>
+            <figure class="gitem" data-flip="window"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop" alt="Casement window" loading="lazy" /></figure>
+            <figure class="gitem" data-flip="door"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop" alt="Sliding door" loading="lazy" /></figure>
+            <figure class="gitem" data-flip="facade"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=600&auto=format&fit=crop" alt="Glass facade" loading="lazy" /></figure>
+            <figure class="gitem" data-flip="door"><img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=600&auto=format&fit=crop" alt="Bi-fold door" loading="lazy" /></figure>
+            <figure class="gitem" data-flip="window"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=600&auto=format&fit=crop" alt="Tilt and turn window" loading="lazy" /></figure>
+            <figure class="gitem" data-flip="facade"><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=600&auto=format&fit=crop" alt="Curtain wall facade" loading="lazy" /></figure>
+            <figure class="gitem" data-flip="facade"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=600&auto=format&fit=crop" alt="Glazed elevation" loading="lazy" /></figure>
+            <figure class="gitem" data-flip="window"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" alt="Interior picture window" loading="lazy" /></figure>
+            <figure class="gitem" data-flip="door"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=600&auto=format&fit=crop" alt="Patio door" loading="lazy" /></figure>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scrollcue" data-hero-fade><i></i>Scroll</div><!-- istilah umum, dibiarkan -->
+    </section>
+
+    <!-- ═══════════ 02 · ABOUT ═══════════ -->
+    <section class="about" id="about" data-scene="Studio" data-scene-index="02">
+      <div class="about__grid">
+        <div class="about__media" data-about-media>
+          <div class="about__media-inner" data-about-parallax>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" alt="Architectural interior with large uPVC windows" />
+          </div>
+          <div class="about__media-mask" data-about-mask></div>
+          <span class="about__media-tag">№ 01 — Filosofi</span>
+        </div>
+        <div class="about__text">
+          <p class="about__kicker" data-reveal-line>Tentang kami</p>
+          <h2 class="about__head" data-mask-lines>
+            <span>Kami membuat</span>
+            <span>batas antara ruang</span>
+            <span>dan langit</span>
+            <span class="italic">menghilang.</span>
+          </h2>
+          <div class="about__body" data-reveal-line>
+            <p>UPV° adalah studio insinyur dan perakit yang terobsesi pada satu garis presisi — tempat dinding berubah menjadi window. Setiap profil dirancang untuk kesenyapan termal, setiap seal diuji terhadap cuaca bertahun-tahun.</p>
+          </div>
+          <div class="about__stats" data-about-stats>
+            <div class="stat"><b data-count="38">0</b><span>dB reduksi suara</span></div>
+            <div class="stat"><b data-count="20">0</b><span>tahun garansi seal</span></div>
+            <div class="stat"><b data-count="100">0</b><span>% profil dapat didaur ulang</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="about__strip" data-about-drift aria-hidden="true">
+        <figure><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=700&auto=format&fit=crop" alt="" loading="lazy" /></figure>
+        <figure><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=700&auto=format&fit=crop" alt="" loading="lazy" /></figure>
+        <figure><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=700&auto=format&fit=crop" alt="" loading="lazy" /></figure>
+        <figure><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=700&auto=format&fit=crop" alt="" loading="lazy" /></figure>
+        <figure><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=700&auto=format&fit=crop" alt="" loading="lazy" /></figure>
+        <figure><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=700&auto=format&fit=crop" alt="" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- ═══════════ 03 · PRODUCTS ═══════════ -->
+    <section class="products" id="products" data-scene="Showroom" data-scene-index="03">
+      <div class="products__intro">
+        <p class="products__kicker" data-reveal-line>Koleksi</p>
+        <h2 class="products__head" data-reveal-line>Lima produk.<br/>Satu obsesi pada detail tepi.</h2>
+      </div>
+      <div class="products__stack" data-products-stack>
+        <!-- card 1 -->
+        <article class="pcard" data-pcard style="--accent:#1f5fd1">
+          <div class="pcard__media"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop" alt="Casement window" /></div>
+          <div class="pcard__body">
+            <span class="pcard__no">01</span>
+            <h3>Casement</h3>
+            <p>Window bukaan ke luar yang klasik, disempurnakan dengan seal multi-titik dan bingkai setipis mungkin agar nyaris tak terlihat.</p>
+            <ul class="pcard__spec"><li>Gasket tripel</li><li>0.8 W/m²K</li><li>Engsel tersembunyi</li></ul>
+            <button class="pcard__hot" data-cursor-hover>Lihat detail</button>
+          </div>
+        </article>
+        <!-- card 2 -->
+        <article class="pcard" data-pcard style="--accent:#2f74e0">
+          <div class="pcard__media"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1600&auto=format&fit=crop" alt="Tilt and turn window" /></div>
+          <div class="pcard__body">
+            <span class="pcard__no">02</span>
+            <h3>Tilt &amp; Turn</h3>
+            <p>Dua cara buka dalam satu mekanisme — miring untuk sirkulasi udara halus, putar untuk membuka penuh ke luar.</p>
+            <ul class="pcard__spec"><li>Dwifungsi</li><li>Ventilasi mikro</li><li>Kaca akustik</li></ul>
+            <button class="pcard__hot" data-cursor-hover>Lihat detail</button>
+          </div>
+        </article>
+        <!-- card 3 -->
+        <article class="pcard" data-pcard style="--accent:#1746a8">
+          <div class="pcard__media"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop" alt="Lift and slide door" /></div>
+          <div class="pcard__body">
+            <span class="pcard__no">03</span>
+            <h3>Lift &amp; Slide</h3>
+            <p>Door sebesar dinding yang meluncur ringan. Ambang merata; taman seakan masuk ke dalam rumah.</p>
+            <ul class="pcard__spec"><li>Panel maks 3m</li><li>Ambang rata</li><li>Rel rem halus</li></ul>
+            <button class="pcard__hot" data-cursor-hover>Lihat detail</button>
+          </div>
+        </article>
+        <!-- card 4 -->
+        <article class="pcard" data-pcard style="--accent:#3b82f6">
+          <div class="pcard__media"><img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?q=80&w=1600&auto=format&fit=crop" alt="Bi-fold door" /></div>
+          <div class="pcard__body">
+            <span class="pcard__no">04</span>
+            <h3>Bi-Fold</h3>
+            <p>Door yang melipat rapi ke samping — satu bidang dinding yang terbuka seperti buku.</p>
+            <ul class="pcard__spec"><li>Hingga 7 daun</li><li>Ambang rendah</li><li>Tahan cuaca</li></ul>
+            <button class="pcard__hot" data-cursor-hover>Lihat detail</button>
+          </div>
+        </article>
+        <!-- card 5 -->
+        <article class="pcard" data-pcard style="--accent:#0f3d8c">
+          <div class="pcard__media"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop" alt="Fixed glass facade" /></div>
+          <div class="pcard__body">
+            <span class="pcard__no">05</span>
+            <h3>Fixed Facade</h3>
+            <p>Bidang kaca tanpa sambungan — untuk ruang yang pemandangannya adalah satu-satunya hiasan.</p>
+            <ul class="pcard__spec"><li>Ikatan struktural</li><li>Kontrol surya</li><li>Tampilan tanpa bingkai</li></ul>
+            <button class="pcard__hot" data-cursor-hover>Lihat detail</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════ 04 · PROJECTS ═══════════ -->
+    <section class="projects" id="projects" data-scene="Proyek" data-scene-index="04">
+      <div class="projects__pin" data-projects-pin>
+        <div class="projects__track" data-projects-track>
+          <!-- intro panel -->
+          <article class="ppanel ppanel--intro">
+            <h2>Hasil<br/><span class="italic">kerja.</span></h2>
+            <p>Geser untuk menelusuri. Empat proyek, empat iklim, satu standar. →</p>
+          </article>
+          <!-- project 1 -->
+          <article class="ppanel" style="--img:url('https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1600&auto=format&fit=crop')">
+            <div class="ppanel__bg"></div>
+            <div class="ppanel__caption">
+              <span class="ppanel__no">01 / Pesisir</span>
+              <h3>Rumah Tanjung</h3>
+              <p>Dinding lift &amp; slide tahan udara laut menghadap lautan lepas.</p>
+            </div>
+          </article>
+          <!-- project 2 — before/after -->
+          <article class="ppanel ppanel--compare" data-compare>
+            <div class="compare__after"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop" alt="Sesudah renovasi" /><b>Sesudah</b></div>
+            <div class="compare__before" data-compare-before><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1600&auto=format&fit=crop" alt="Sebelum renovasi" /><b>Sebelum</b></div>
+            <div class="compare__handle" data-compare-handle><i></i></div>
+            <div class="ppanel__caption ppanel__caption--light">
+              <span class="ppanel__no">02 / Renovasi</span>
+              <h3>Renovasi Rumah Lama</h3>
+              <p>Geser garis pemisah — rumah tua yang bernapas kembali.</p>
+            </div>
+          </article>
+          <!-- project 3 -->
+          <article class="ppanel" style="--img:url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1600&auto=format&fit=crop')">
+            <div class="ppanel__bg"></div>
+            <div class="ppanel__caption">
+              <span class="ppanel__no">03 / Pegunungan</span>
+              <h3>Kabin Pinus</h3>
+              <p>Tilt &amp; turn kaca tripel untuk malam bersuhu −20°C.</p>
+            </div>
+          </article>
+          <!-- project 4 -->
+          <article class="ppanel" style="--img:url('https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=1600&auto=format&fit=crop')">
+            <div class="ppanel__bg"></div>
+            <div class="ppanel__caption">
+              <span class="ppanel__no">04 / Perkotaan</span>
+              <h3>Menara Senyap</h3>
+              <p>Kaca akustik 38 dB di atas kota yang tak pernah berhenti.</p>
+            </div>
+          </article>
+          <!-- outro -->
+          <article class="ppanel ppanel--outro">
+            <p>Proyek Anda berikutnya.</p>
+            <a href="#contact" class="ppanel__cta" data-cursor-hover>Mulai proyek →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 05 · SERVICES ═══════════ -->
+    <section class="services" id="services" data-scene="Proses" data-scene-index="05">
+      <div class="services__head">
+        <p class="services__kicker" data-reveal-line>Cara kami bekerja</p>
+        <h2 data-reveal-line>Dari sketsa hingga terpasang.</h2>
+      </div>
+      <div class="services__panels" data-services-panels>
+        <article class="spanel" data-spanel>
+          <span class="spanel__no">01</span>
+          <h3>Survei &amp; Akustik</h3>
+          <p>Kami ukur cahaya, kebisingan, dan kebiasaan Anda sebelum satu profil pun dirancang.</p>
+        </article>
+        <article class="spanel" data-spanel>
+          <span class="spanel__no">02</span>
+          <h3>Rancang Custom</h3>
+          <p>Profil, penguat, dan kaca ditentukan per bukaan — tanpa kompromi katalog.</p>
+        </article>
+        <article class="spanel" data-spanel>
+          <span class="spanel__no">03</span>
+          <h3>Pemasangan Presisi</h3>
+          <p>Tim bersertifikat, bingkai diukur laser, perimeter di-seal dan diuji tekanan di lokasi.</p>
+        </article>
+        <article class="spanel" data-spanel>
+          <span class="spanel__no">04</span>
+          <h3>Garansi &amp; Layanan</h3>
+          <p>Garansi seal 20 tahun dan layanan purna jual yang cepat tanggap.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════ 06 · TESTIMONIALS ═══════════ -->
+    <section class="quotes" id="testimonials" data-scene="Testimoni" data-scene-index="06">
+      <div class="quotes__head">
+        <p class="quotes__kicker" data-reveal-line>Kata mereka</p>
+        <h2 data-reveal-line>Geser ruangannya.</h2>
+      </div>
+      <div class="quotes__viewport" data-quotes-viewport>
+        <div class="quotes__track" data-quotes-track>
+          <figure class="qcard" data-qcard>
+            <blockquote>"Suara kota lenyap. Saya buka window untuk udara dan tak terdengar apa-apa — terasa ajaib, dan kini jadi keharusan."</blockquote>
+            <figcaption><b>Ana Reyes</b><span>Menara Senyap, unit 14F</span></figcaption>
+          </figure>
+          <figure class="qcard" data-qcard>
+            <blockquote>"Mereka memperlakukan window seperti furnitur. Bingkainya jauh lebih tipis dari penawaran tempat lain."</blockquote>
+            <figcaption><b>Marek &amp; Lou</b><span>Renovasi Rumah Lama</span></figcaption>
+          </figure>
+          <figure class="qcard" data-qcard>
+            <blockquote>"Melewati tiga musim dingin, kacanya tak pernah berembun. Kabin menahan hangat seperti menahan napas."</blockquote>
+            <figcaption><b>S. Bauer</b><span>Kabin Pinus</span></figcaption>
+          </figure>
+          <figure class="qcard" data-qcard>
+            <blockquote>"Udara laut merusak hardware. Empat tahun di pesisir dan door slide-nya masih meluncur dengan satu jari."</blockquote>
+            <figcaption><b>Keluarga Calloway</b><span>Rumah Tanjung</span></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="quotes__hint" data-cursor-hover>← geser · atau scroll →</div>
+    </section>
+
+    <!-- ═══════════ 07 · CONTACT + FOOTER ═══════════ -->
+    <footer class="closing" id="contact" data-scene="Penutup" data-scene-index="07">
+      <div class="closing__glass" data-closing-glass aria-hidden="true">
+        <i></i><i></i><i></i>
+      </div>
+      <div class="closing__inner">
+        <p class="closing__kicker" data-reveal-line>Babak terakhir</p>
+        <h2 class="closing__head" data-closing-head>
+          <span>Mari rancang</span>
+          <span class="italic">window Anda.</span>
+        </h2>
+        <a href="mailto:halo@upv.id" class="closing__mail" data-cursor-hover data-magnetic>halo@upv.id</a>
+        <div class="closing__cta-row">
+          <a href="#contact" class="closing__cta" data-cursor-hover data-magnetic><span>Minta Penawaran</span></a>
+        </div>
+      </div>
+
+      <!-- ░░ SERVICE AREA — one expandable North Sumatra map ░░ -->
+      <div class="coverage" data-coverage>
+        <div class="coverage__head">
+          <p class="coverage__kicker">Area Layanan · Sumatera Utara</p>
+          <h3 class="coverage__title">Dibuat di Medan.<br/><span class="italic">Dipasang ke seluruh wilayah.</span></h3>
+          <p class="coverage__sub">Tim survei &amp; pemasangan bersertifikat kami melayani Medan dan kota-kota di sekitarnya. Ketuk peta untuk melihat semua lokasi yang kami layani.</p>
+        </div>
+
+        <div class="coverage__map" data-map-card aria-expanded="false">
+          <!-- collapsed teaser -->
+          <div class="coverage__teaser" data-map-teaser>
+            <div class="coverage__teaser-tex" aria-hidden="true"></div>
+            <div class="coverage__teaser-text">
+              <span class="coverage__teaser-kicker"><i></i>Peta interaktif</span>
+              <h4>Sumatera Utara — 6 kota layanan</h4>
+              <p>Medan · Binjai · Tebing Tinggi · Pematang Siantar · Tanjung Balai · Kisaran</p>
+            </div>
+            <span class="coverage__teaser-btn">Ketuk untuk buka <i class="arrow"></i></span>
+          </div>
+          <!-- real map mounts here on first open -->
+          <div class="coverage__canvas" data-map-canvas></div>
+          <ul class="coverage__legend" data-map-legend></ul>
+        </div>
+      </div>
+
+      <!-- ░░ PAYMENT / REKENING ░░ -->
+      <div class="payment" data-payment>
+        <div class="payment__head">
+          <p class="payment__kicker">Pembayaran · Transfer</p>
+          <h3 class="payment__title">Rekening resmi <span class="italic">UPV°</span></h3>
+          <p class="payment__sub">Pembayaran hanya ke rekening atas nama berikut. Ketuk kartu untuk menyalin nomor rekening.</p>
+        </div>
+        <div class="payment__cards">
+          <article class="bankcard" data-bankcard data-rek="1234567890" style="--c1:#0a2a5e; --c2:#1f5fd1">
+            <div class="bankcard__shine" aria-hidden="true"></div>
+            <div class="bankcard__top">
+              <span class="bankcard__bank">BCA</span>
+              <span class="bankcard__chip" aria-hidden="true"></span>
+            </div>
+            <div class="bankcard__num"><span data-rek-display>1234 5678 90</span></div>
+            <div class="bankcard__bottom">
+              <div><small>Atas Nama</small><b>PT UPV Apertures</b></div>
+              <div><small>Cabang</small><b>Medan</b></div>
+            </div>
+            <span class="bankcard__copy" data-copy-label>Ketuk untuk salin</span>
+          </article>
+
+          <article class="bankcard" data-bankcard data-rek="0987654321" style="--c1:#103a73; --c2:#3b82f6">
+            <div class="bankcard__shine" aria-hidden="true"></div>
+            <div class="bankcard__top">
+              <span class="bankcard__bank">Mandiri</span>
+              <span class="bankcard__chip" aria-hidden="true"></span>
+            </div>
+            <div class="bankcard__num"><span data-rek-display>0987 6543 21</span></div>
+            <div class="bankcard__bottom">
+              <div><small>Atas Nama</small><b>PT UPV Apertures</b></div>
+              <div><small>Cabang</small><b>Medan</b></div>
+            </div>
+            <span class="bankcard__copy" data-copy-label>Ketuk untuk salin</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="closing__foot">
+        <div class="closing__cols">
+          <div><span>Ikuti</span><a href="#" data-cursor-hover>Instagram</a><a href="#" data-cursor-hover>Facebook</a><a href="#" data-cursor-hover>TikTok</a></div>
+          <div><span>Alamat</span><p>Jl. Contoh No. 14<br/>Medan, Sumatera Utara</p></div>
+          <div><span>Jam Buka</span><p>Sen — Sab · 09.00—18.00<br/>Dengan janji temu</p></div>
+        </div>
+        <div class="closing__base">
+          <span>© <i data-year>2026</i> UPV° · Window &amp; Door uPVC</span>
+          <span>Dibuat untuk kesenyapan, cahaya &amp; ketahanan.</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

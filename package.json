@@ -1,0 +1,20 @@
+{
+  "name": "upv-architectural",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "UPV — premium uPVC windows & doors. An immersive architectural showroom experience.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "leaflet": "^1.9.4",
+    "lenis": "^1.1.18"
+  }
+}
