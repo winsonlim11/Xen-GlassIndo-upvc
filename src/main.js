@@ -13,7 +13,6 @@ import { initAbout } from './sections/about.js';
 import { initProducts } from './sections/products.js';
 import { initProjects } from './sections/projects.js';
 import { initServices } from './sections/services.js';
-import { initTestimonials } from './sections/testimonials.js';
 import { initCoverage } from './sections/coverage.js';
 import { initPayment } from './sections/payment.js';
 import { initClosing } from './sections/closing.js';
@@ -34,7 +33,6 @@ function boot() {
   initProducts();
   initProjects();
   initServices();
-  initTestimonials();
   initCoverage();
   initPayment();
   initClosing();
