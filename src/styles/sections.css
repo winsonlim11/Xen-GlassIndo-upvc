@@ -29,17 +29,48 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 .hero__inner { position: relative; z-index: 2; }
-.hero__eyebrow { margin-bottom: 1.6rem; }
-.hero__title { font-size: clamp(2.8rem, 1.8rem + 5.5vw, 7rem); margin-bottom: 2rem; }
+.hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 0.85rem;
+  margin-bottom: 1.9rem;
+}
+.hero__eyebrow::before {
+  content: ""; width: clamp(1.6rem, 4vw, 3.4rem); height: 1px;
+  background: linear-gradient(90deg, transparent, var(--bronze));
+}
+.hero__title {
+  font-size: clamp(2.6rem, 1.7rem + 4.4vw, 5.6rem);
+  line-height: 0.92; margin-bottom: 2.2rem;
+}
 .hero__title .line { display: block; overflow: hidden; }
 .hero__title .word { display: inline-block; } /* visible by default — reveal is enhancement only */
-.hero__title .word.italic { color: var(--bronze-lt); }
-.hero__title .word.deg { color: var(--bronze); }
+/* animated blue gradient sweep on the signature word */
+.hero__title .word.italic {
+  background: linear-gradient(100deg,
+    var(--bronze) 0%, var(--bronze-lt) 40%, #8fb6fb 50%,
+    var(--bronze-lt) 60%, var(--bronze) 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  animation: heroSheen 7s linear infinite;
+}
+@keyframes heroSheen { to { background-position: -220% 0; } }
+/* the ° brand mark — soft pulsing halo */
+.hero__title .word.deg { color: var(--bronze); position: relative; }
+.hero__title .word.deg::after {
+  content: ""; position: absolute; inset: -0.28em -0.32em auto auto;
+  width: 0.9em; height: 0.9em; border-radius: 50%;
+  background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+  animation: heroHalo 4.5s var(--ease) infinite; z-index: -1;
+}
+@keyframes heroHalo { 0%,100% { transform: scale(0.9); opacity: 0.5; } 50% { transform: scale(1.35); opacity: 1; } }
 .hero__meta {
   display: flex; flex-wrap: wrap; gap: 1.6rem 3rem; align-items: flex-end;
   max-width: 720px;
 }
-.hero__meta p { color: var(--bone-dim); max-width: 38ch; }
+.hero__meta p {
+  color: var(--bone-dim); max-width: 40ch;
+  padding-left: 1.1rem; border-left: 2px solid var(--glass-line);
+}
 .hero__scrolllink {
   display: inline-flex; align-items: center; gap: 0.7rem;
   font-size: var(--step--1); letter-spacing: 0.12em; text-transform: uppercase;
@@ -89,7 +120,7 @@
 @media (max-width: 960px){
   .hero { padding-bottom: 4rem; }
   .hero__layout { grid-template-columns: 1fr; gap: 2.6rem; }
-  .hero__title { font-size: clamp(2.8rem, 8vw, 5rem); }
+  .hero__title { font-size: clamp(2.6rem, 10vw, 4.4rem); }
   .hero__scrollcue { display: none; }
 }
 
